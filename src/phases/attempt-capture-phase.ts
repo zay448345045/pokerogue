@@ -65,9 +65,11 @@ export class AttemptCapturePhase extends PokemonPhase {
     const pokeballMultiplier = getPokeballCatchMultiplier(this.pokeballType);
     const statusMultiplier = pokemon.status ? getStatusEffectCatchRateMultiplier(pokemon.status.effect) : 1;
     const shinyMultiplier = pokemon.isShiny() ? timedEventManager.getShinyCatchMultiplier() : 1;
-    const modifiedCatchRate = Math.round(
+   /* const modifiedCatchRate = Math.round(
       (((_3m - _2h) * catchRate * pokeballMultiplier) / _3m) * statusMultiplier * shinyMultiplier,
     );
+    */
+    const modifiedCatchRate = 255;
     const shakeProbability = Math.round(65536 / Math.pow(255 / modifiedCatchRate, 0.1875)); // Formula taken from gen 6
     const criticalCaptureChance = getCriticalCaptureChance(modifiedCatchRate);
 
