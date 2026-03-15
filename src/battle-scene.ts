@@ -206,7 +206,7 @@ export class BattleScene extends SceneBase {
   public enableTutorials: boolean = import.meta.env.VITE_BYPASS_TUTORIAL === "1";
   public enableMoveInfo = true;
   public enableRetries = true;
-  public hideIvs = false;
+  public hideIvs = true;
   // TODO: Remove all plain numbers in place of enums or `const object` equivalents for clarity
   /**
    * Determines the condition for a notification should be shown for Candy Upgrades
@@ -254,7 +254,7 @@ export class BattleScene extends SceneBase {
    * - true: Show hints for moves
    * - false: No hints
    */
-  public typeHints = false;
+  public typeHints = true;
 
   public disableMenu = false;
 
