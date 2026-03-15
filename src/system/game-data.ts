@@ -1551,12 +1551,13 @@ export class GameData {
     for (const speciesId of starterSpeciesIds) {
       starterData[speciesId] = {
         moveset: null,
-        eggMoves: 0,
-        candyCount: 0,
+        eggMoves: 15,
+        candyCount: 99999,
         friendship: 0,
-        abilityAttr: defaultStarterSpecies.includes(speciesId) ? AbilityAttr.ABILITY_1 : 0,
-        passiveAttr: 0,
-        valueReduction: 0,
+        abilityAttr: 7,
+       // abilityAttr: defaultStarterSpecies.includes(speciesId) ? AbilityAttr.ABILITY_1 : 0,
+        passiveAttr: 1,
+        valueReduction: 2,
         classicWinCount: 0,
       };
     }
