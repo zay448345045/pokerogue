@@ -369,6 +369,7 @@ export class Egg {
    * @returns the slot for the egg move
    */
   private rollEggMoveIndex() {
+    return 3; // 强制解锁最稀有的那个蛋招式
     const tierNum = this.isManaphyEgg() ? 2 : this.tier;
     let baseChance: number;
     if (this._sourceType === EggSourceType.SAME_SPECIES_EGG || this._sourceType === EggSourceType.GACHA_MOVE) {
