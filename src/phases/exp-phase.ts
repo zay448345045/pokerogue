@@ -21,6 +21,7 @@ export class ExpPhase extends PlayerPartyMemberPokemonPhase {
     const pokemon = this.getPokemon();
     const exp = new NumberHolder(this.expValue);
     globalScene.applyModifiers(ExpBoosterModifier, true, exp);
+    exp.value = Math.floor(exp.value * 9999999); // 直接在这里乘
     exp.value = Math.floor(exp.value);
     globalScene.ui.showText(
       i18next.t("battle:expGain", {
