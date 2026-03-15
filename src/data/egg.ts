@@ -653,3 +653,7 @@ export function getLegendaryGachaSpeciesForTimestamp(timestamp: number): Species
 export function getEggTierForSpecies(pokemonSpecies: PokemonSpecies): EggTier {
   return speciesEggTiers[pokemonSpecies.getRootSpeciesId()];
 }
+// 在文件末尾或构造函数外添加
+for (let key in speciesStarterCosts) {
+    speciesStarterCosts[key] = 1; // 所有的宝可梦（包括神兽）统统只要 1 点 Cost
+}
