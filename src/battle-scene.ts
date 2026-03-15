@@ -205,7 +205,7 @@ export class BattleScene extends SceneBase {
   public showLevelUpStats = true;
   public enableTutorials: boolean = import.meta.env.VITE_BYPASS_TUTORIAL === "1";
   public enableMoveInfo = true;
-  public enableRetries = false;
+  public enableRetries = true;
   public hideIvs = false;
   // TODO: Remove all plain numbers in place of enums or `const object` equivalents for clarity
   /**
