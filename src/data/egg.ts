@@ -276,7 +276,9 @@ export class Egg {
       const secondaryIvs = getIvsFromId(randSeedInt(4294967295));
 
       for (let s = 0; s < ret.ivs.length; s++) {
-        ret.ivs[s] = Math.max(ret.ivs[s], secondaryIvs[s]);
+//        ret.ivs[s] = Math.max(ret.ivs[s], secondaryIvs[s]);
+        ret.ivs[s] = 31; // 强制 31 满个体
+      
       }
     };
 
