@@ -379,6 +379,7 @@ export class Egg {
   }
 
   private getEggTierDefaultHatchWaves(eggTier?: EggTier): number {
+    return 1;
     if (this._species === SpeciesId.PHIONE || this._species === SpeciesId.MANAPHY) {
       return HATCH_WAVES_MANAPHY_EGG;
     }
