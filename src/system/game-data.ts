@@ -398,6 +398,21 @@ export class GameData {
 
     this.dexData = Object.assign(this.dexData, systemData.dexData);
     this.consolidateDexData(this.dexData);
+    // --- 极客补丁：蛋组技能 & 被动技能 & 隐藏特性全开 ---
+    if (this.starterData) {
+      Object.keys(this.starterData).forEach(id => {
+        const starter = this.starterData[id];
+        // 15 = 二进制 1111，代表解锁全部 4 个蛋组技能
+        starter.eggMoves = 15; 
+        // 解锁被动技能
+        starter.passiveAttr = true;
+        // 解锁所有特性（含梦特）
+        starter.abilityAttr = 7; 
+        // 顺便送你 999 个糖果，开局直接把 Cost 减到最低
+        starter.candyCount = 999; 
+      });
+    }
+    // --- 极客补丁结束 ---
     this.defaultDexData = null;
   }
 
