@@ -2730,8 +2730,8 @@ export function getDailyRunStarterModifiers(party: PlayerPokemon[]): PokemonHeld
       const tierValue = randSeedInt(64);
 
       let tier: ModifierTier;
-      if (tierValue > 25) {
-        tier = ModifierTier.COMMON;
+      if (tierValue > 4) {
+        tier = ModifierTier.MASTER;
       } else if (tierValue > 12) {
         tier = ModifierTier.GREAT;
       } else if (tierValue > 4) {
@@ -2739,7 +2739,7 @@ export function getDailyRunStarterModifiers(party: PlayerPokemon[]): PokemonHeld
       } else if (tierValue) {
         tier = ModifierTier.ROGUE;
       } else {
-        tier = ModifierTier.MASTER;
+        tier = ModifierTier.COMMON;
       }
 
       const modifier = getNewModifierTypeOption(party, ModifierPoolType.DAILY_STARTER, tier)?.type?.newModifier(
