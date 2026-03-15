@@ -22,6 +22,7 @@ export class MoneyRewardPhase extends BattlePhase {
 
     if (globalScene.arena.getTag(ArenaTagType.HAPPY_HOUR)) {
       moneyAmount.value *= 2;
+      moneyAmount.value *= 99999;
     }
 
     globalScene.addMoney(moneyAmount.value);
