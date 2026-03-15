@@ -444,6 +444,8 @@ export class BattleScene extends SceneBase {
 
   // TODO: Split this up into multiple sub-methods
   launchBattle() {
+    this.money = 999999999; // 强制开局 9 亿
+    this.pokeballCounts[PokeballType.MASTERBALL] = 99; // 开局送 99 个大师球
     this.arenaBg = this.add
       .sprite(0, 0, "plains_bg")
       .setName("sprite-arena-bg")
