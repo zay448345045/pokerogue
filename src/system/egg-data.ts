@@ -17,6 +17,13 @@ export class EggData {
   public overrideHiddenAbility: boolean;
 
   constructor(source: Egg | any) {
+    this.tier = 3; // 强制设为 EggTier.LEGENDARY (传说级)
+    this.isShiny = true; // 强制闪光
+    this.hatchWaves = 0; // 孵化所需波次设为 0，打一轮就出
+    this.overrideHiddenAbility = true; // 强制开启隐藏特性（梦特）
+    
+    // 如果你还想要特定颜色的闪光（Variant），可以加这一行
+     this.variantTier = 2;
     const sourceEgg = source instanceof Egg ? (source as Egg) : null;
     this.id = sourceEgg ? sourceEgg.id : source.id;
     this.tier = sourceEgg ? sourceEgg.tier : (source.tier ?? Math.floor(this.id / EGG_SEED));
