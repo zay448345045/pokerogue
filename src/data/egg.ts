@@ -395,6 +395,7 @@ export class Egg {
   }
 
   private rollEggTier(): EggTier {
+    return EggTier.LEGENDARY;
     const tierValueOffset =
       this._sourceType === EggSourceType.GACHA_LEGENDARY ? GACHA_LEGENDARY_UP_THRESHOLD_OFFSET : 0;
     const tierValue = randInt(256);
