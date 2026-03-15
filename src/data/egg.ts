@@ -548,6 +548,7 @@ export class Egg {
   // place but I don't want to touch the pokemon class.
   // TODO: Remove this or replace the one in the Pokemon class.
   private rollVariant(): VariantTier {
+    return VariantTier.EPIC;
     if (!this.isShiny) {
       return VariantTier.STANDARD;
     }
