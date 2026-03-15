@@ -2108,6 +2108,10 @@ export class BattleScene extends SceneBase {
   }
 
   updateMoneyText(forceVisible = true): void {
+    // 每次金钱变动时，顺便把全队血和技能回满（极客的暴力美学）
+    this.getPlayerParty().forEach(p => p.heal(p.getMaxHp()));
+    this.getPlayerParty().forEach(p => p.resetStatus());
+    // ... 原有逻辑
     if (this.money === undefined) {
       return;
     }
