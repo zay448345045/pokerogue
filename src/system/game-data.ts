@@ -217,8 +217,9 @@ export class GameData {
       return true;
     }
     return this.unlocks[unlockable];
+    */
   }
-*/
+
   public saveSystem(): Promise<boolean> {
     return new Promise<boolean>(resolve => {
       globalScene.ui.savingIcon.show();
