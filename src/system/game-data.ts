@@ -212,7 +212,7 @@ export class GameData {
    * @returns `true` if the player has unlocked this `Unlockable` or an override has enabled it
    */
   public isUnlocked(unlockable: Unlockables): boolean {
-    return true
+    return true;
  /*   if (Overrides.ITEM_UNLOCK_OVERRIDE.includes(unlockable)) {
       return true;
     }
